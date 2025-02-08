@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HAPPY BIRTHDAY GILLES DUSONG</title>
+        <link rel="icon" href="" type="image/jpg">
+        <meta name="keywords" content="">
+        <meta name="author" content="Deveny Faruque">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kode+Mono:wght@400..700&family=Sixtyfour&family=Syne+Mono&family=VT323&family=Workbench&display=swap" rel="stylesheet">
+          
+        <style>
+body {
+background-color:blue;
+color: yellow;
+margin:0;
+padding:0;
+left:0;
+top:0;
+width:100vw;
+height: 100%;
+}
+.fornow {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+   .bino{ 
+  display: block;
+  position: absolute;
+       width: 60vw;
+       height: auto;
+   }
+   .txt{
+       height: 100vh;
+       position: absolute;
+       top: 0;
+       right: 0;
+       mix-blend-mode: lighten;
+       opacity: 0.9;
+   }
+   @keyframes color-shape-movement {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+.fly{
+    width: 20rem;
+    height: auto;
+    filter: blur(1px);
+    position: relative;
+    -webkit-animation-name: color-shape-movement; 
+    -webkit-animation-duration: 8s;
+    animation-name: color-shape-movement;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+    z-index: 2000;
+}
+.top{
+    position: absolute;
+}
+   @media only screen and (max-width: 800px) {
+    .txt{
+       height: 100%;
+  }
+}
+        </style>
+</head><body>
+
+   I made you a CMS that is not online but you can try it out when you are in Deurne <3
+</body>
+    <script>
+$( document ).ready(function() {
+        $(".fornow").mousemove(function(e) {
+  parallaxIt(e, ".bino", -100);
+  parallaxIt(e, ".bino.bg", -150);
+  parallaxIt(e, ".txt", -10);
+});
+
+function parallaxIt(e, target, movement) {
+  var $this = $(".fornow");
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 1, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement
+  });
+}
+});
+
+
+</script>
+</html>
