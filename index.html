@@ -45,7 +45,28 @@ height: 100%;
        mix-blend-mode: lighten;
        opacity: 0.9;
    }
-
+   @keyframes color-shape-movement {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+.fly{
+    width: 20rem;
+    height: auto;
+    filter: blur(1px);
+    position: relative;
+    -webkit-animation-name: color-shape-movement; 
+    -webkit-animation-duration: 8s;
+    animation-name: color-shape-movement;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+    z-index: 2000;
+}
+.top{
+    position: absolute;
+}
    @media only screen and (max-width: 800px) {
     .txt{
        height: 100%;
@@ -53,18 +74,25 @@ height: 100%;
 }
         </style>
 </head><body>
+
+    <a class="top" href="/cms.html"><img class="fly" src="/img/button.png"></a>
+
     <div class="fornow">
         <h1>under construction
         </h1>
-                <img class="txt" src="/img/fornow.png">
-    <img class="bino" src="/img/bg.png">
+                <img class="txt" src="/img/gilles.jpg">
+    <img class="bino bg" src="/img/gilles.jpg">
+    <img class="bino" src="/img/Gillesdomain.png">
+
 </div>
+
         </div>
 </body>
     <script>
 $( document ).ready(function() {
         $(".fornow").mousemove(function(e) {
   parallaxIt(e, ".bino", -100);
+  parallaxIt(e, ".bino.bg", -150);
   parallaxIt(e, ".txt", -10);
 });
 
@@ -79,5 +107,8 @@ function parallaxIt(e, target, movement) {
   });
 }
 });
+
+alert(`happy birthday :)`)
+
 </script>
 </html>
