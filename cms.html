@@ -26,6 +26,11 @@ left:0;
 top:0;
 width:100vw;
 height: 100%;
+  font-family: "VT323", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+
 }
 .fornow {
   position: relative;
@@ -78,14 +83,22 @@ height: 100%;
 }
         </style>
 </head><body>
+	I made you a CMS that is not online but you can try it out when you are in Deurne <3
+	    <div class="fornow">
+        <h1>
+        </h1>
+    <img class="bino bg" src="/img/letterc.png">
+    <img class="bino bgm" src="/img/letterm.png">
+	<img class="bino" src="/img/letters.png">
 
-   I made you a CMS that is not online but you can try it out when you are in Deurne <3
+</div>
 </body>
     <script>
 $( document ).ready(function() {
         $(".fornow").mousemove(function(e) {
   parallaxIt(e, ".bino", -100);
-  parallaxIt(e, ".bino.bg", -150);
+  parallaxIt(e, ".bino.bg", -180);
+  parallaxIt(e, ".bino.bgm", -250);
   parallaxIt(e, ".txt", -10);
 });
 
